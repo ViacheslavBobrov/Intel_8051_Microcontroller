@@ -4,7 +4,7 @@
 
 ; =====================Initialization=========================
 
-        ORG        0000h             ; Start program address
+        ORG     0000h                ; Start program address
         LJMP    INIT                 ; Go to the beginning of the initialization procedure
 ; ___Table of interrupt vectors___
         ORG     001Bh                ; T/C1 interrupt vector address
@@ -36,9 +36,9 @@
         ;   0      1    2      3      4      5      6      7
         DB  00,  089h,  059h,  013h,  068h,  004h,  090h,  00Ch
 ; __ Notes duration
-    ; Working with 1/32 duration
-    ; 1/8 = 1/32 * 4
-    ; 1/4 = 1/32 * 8
+       ; Working with 1/32 duration
+       ; 1/8 = 1/32 * 4
+       ; 1/4 = 1/32 * 8
         ORG     0300H
         ; 0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
         DB 04,04,04,04,08,08,04,04,04,04,08,08,04,04,04,04   ; 0
@@ -119,7 +119,7 @@ ASK_BUT:
         MOV     P1,      #11110000b    
         ORL     A,       P1            
         
-        CJNE    A,       #11111111b,    BUT_IS_PUSH
+        CJNE    A,       #11111111b, BUT_IS_PUSH
         LJMP    ASK_BUT                
 
 BUT_IS_PUSH:
