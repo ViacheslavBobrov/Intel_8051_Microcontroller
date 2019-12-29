@@ -1,5 +1,5 @@
         ORG        0000h                 ; Program Start Address
-        LJMP    INIT                     ; Go to the beginning of the initialization procedure
+        LJMP       INIT                  ; Go to the beginning of the initialization procedure
 ; -- Table of interrupt vectors -----------------------------------------------------------
         ORG        001Bh                 ; T/C1 interrupt vector address
         LJMP    IT100                    ; Go to T/C1 interrupt processing
